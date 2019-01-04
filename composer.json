@@ -10,7 +10,6 @@
         "drupal/media_entity_generic": "^1.0",
         "acquia/lightning_dev": "dev-8.x-1.x",
         "acquia/drupal-spec-tool": "^2.0",
-        "phpunit/phpunit": "^6"
     },
     "require": {
         "drupal-composer/drupal-scaffold": "^2.0.0",
@@ -39,10 +38,16 @@
         "drupal/restui": "^1.16",
         "drupal/health_check": "^1.0",
         "drupal/graphql": "^3.0@RC",
-        "weitzman/drupal-test-traits": "dev-master",
         "drupal/address": "^1.4",
         "drupal/node_title_help_text": "^1.0",
-        "drupal/field_group": "^1.0"
+        "drupal/field_group": "^1.0",
+        "phpunit/phpunit": "^6",
+        "weitzman/drupal-test-traits": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Traits\\": "tests/traits"
+        }
     },
     "repositories": {
         "drupal": {
