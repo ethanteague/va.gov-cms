@@ -14,6 +14,7 @@ Feature: Content model fields
 | Content type | Benefits detail page | Meta description | field_description | Text (plain) | Required | 1 | Textfield with counter |  |
 | Content type | Benefits detail page | Featured content | field_featured_content | Entity reference revisions |  | Unlimited | Paragraphs EXPERIMENTAL |  |
 | Content type | Benefits detail page | Intro text | field_intro_text | Text (plain, long) | Required | 1 | Textarea (multiple rows) with counter |  |
+| Content type | Benefits detail page | Intro text | field_intro_text_limited_html | Text (formatted, long) | Required | 1 | -- Disabled -- |  |
 | Content type | Benefits detail page | Meta tags | field_meta_tags | Meta tags |  | 1 | Advanced meta tags form |  |
 | Content type | Benefits detail page | Meta title tag | field_meta_title | Text (plain) | Required | 1 | Textfield with counter |  |
 | Content type | Benefits detail page | Page last built | field_page_last_built | Date |  | 1 | -- Disabled -- |  |
@@ -64,7 +65,7 @@ Feature: Content model fields
 | Content type | Event | Location type | field_location_type | List (text) |  | 1 | Select list |  |
 | Content type | Event | Image | field_media | Entity reference |  | 1 | Media library | Translatable |
 | Content type | Event | Meta tags | field_meta_tags | Meta tags |  | 1 | Advanced meta tags form | Translatable |
-| Content type | Event | Event listing | field_listing | Entity reference | Required | 1 | Select list |  |
+| Content type | Event | Event listing | field_listing | Entity reference | Required | 1 | -- Disabled -- |  |
 | Content type | Event | Order | field_order | List (integer) |  | 1 | Select list |  |
 | Content type | Event | URL of an online event | field_url_of_an_online_event | Link |  | 1 | Linkit |  |
 | Content type | Event listing | Owner | field_administration | Entity reference | Required | 1 | Select list | Translatable |
@@ -94,7 +95,7 @@ Feature: Content model fields
 | Content type | Publication | Format | field_format | List (text) | Required | 1 | Select list |  |
 | Content type | Publication | File or video | field_media | Entity reference |  | 1 | Media library |  |
 | Content type | Publication | Meta tags | field_meta_tags | Meta tags |  | 1 | Advanced meta tags form | Translatable |
-| Content type | Publication | Publication listing | field_listing | Entity reference | Required | 1 | Select list | Translatable |
+| Content type | Publication | Publication listing | field_listing | Entity reference | Required | 1 | -- Disabled -- | Translatable |
 | Content type | Publication listing | Owner | field_administration | Entity reference | Required | 1 | Select list | Translatable |
 | Content type | Publication listing | Meta description | field_description | Text (plain) | Required | 1 | Textfield with counter | Translatable |
 | Content type | Publication listing | Intro text | field_intro_text | Text (plain, long) |  | 1 | Text area (multiple rows) | Translatable |
