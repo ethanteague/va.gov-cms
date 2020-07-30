@@ -436,24 +436,22 @@ function _va_gov_backend_modify_paragraph_interactions(array &$element, FormStat
         ],
       ];
     }
+    // Remove catpion, rows, and import fields from address tablefield.
+    unset($element['subform']['field_facility_service_hours']['widget'][0]['caption']);
+    $element['subform']['field_facility_service_hours']['widget'][0]['#import'] = FALSE;
+    $element['subform']['field_facility_service_hours']['widget'][0]['#addrow'] = FALSE;
+    $element['subform']['field_facility_service_hours']['widget'][0]['#rebuild'] = FALSE;
   }
 
   // Toggle address field depending on "Use facility address?" boolean.
   if ($paragraph_type === 'service_location_address') {
-    $toggle_fields = [
-      'field_address',
-      'field_building_name_number',
-      'field_clinic_name',
-      'field_wing_floor_or_room_number',
-    ];
+
     $selector = sprintf(':input[name="field_service_location[%1$d][subform][field_service_location_address][%1$d][subform][field_use_facility_address][value]"]', $element['#delta']);
-    foreach ($toggle_fields as $field) {
-      $element['subform'][$field]['#states'] = [
-        'invisible' => [
-          $selector => ['checked' => TRUE],
-        ],
-      ];
-    }
+    $element['subform']['field_address']['#states'] = [
+      'invisible' => [
+        $selector => ['checked' => TRUE],
+      ],
+    ];
   }
 
   // 1. Hide the extension field if phone option is not selected.
@@ -462,7 +460,7 @@ function _va_gov_backend_modify_paragraph_interactions(array &$element, FormStat
     // Each paragraph has an incrementing delta.
     // Allows for controlling state / adding id for each unique widget delta.
     // Otherwise, all elements will be affected.
-    $selector = sprintf(':input[name="field_phone_numbers_paragraph[%d][subform][field_phone_number_type]"]', $element['#delta']);
+    $selector = sprintf(':input[name="field_phone_numbers_paragraph[%1%d][subform][field_phone_number_type]"]', $element['#delta']);
     if ($paragraph_entity_reference_field_name === 'field_phone') {
       $selector = sprintf(':input[name="field_service_location[%1$d][subform][field_phone][%1$d][subform][field_phone_number_type]"]', $element['#delta']);
     }
