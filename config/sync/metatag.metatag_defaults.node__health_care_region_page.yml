@@ -5,5 +5,5 @@ dependencies: {  }
 id: node__health_care_region_page
 label: 'Content: Health Care System'
 tags:
-  title: '[node:title] | [node:field_office] | Veterans Affairs'
-  twitter_cards_title: '[node:title] | [node:field_office] | Veterans Affairs'
+  title: '[node:title] | Veterans Affairs'
+  twitter_cards_title: '[node:title] | Veterans Affairs'

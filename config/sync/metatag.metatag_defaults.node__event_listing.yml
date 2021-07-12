@@ -5,5 +5,5 @@ dependencies: {  }
 id: node__event_listing
 label: 'Content: Event listing'
 tags:
-  title: '[node:title] | [node:field_office] | Veterans Affairs'
-  twitter_cards_title: '[node:title] | [node:field_office] | Veterans Affairs'
+  title: '[node:title] | Veterans Affairs'
+  twitter_cards_title: '[node:title] | Veterans Affairs'
